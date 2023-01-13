@@ -1,0 +1,9 @@
+
+@media only screen and (mid-width:36cm) {}
+
+
+nav {
+        flex-direction:row;
+        justify-content: right;
+        gap: 3rem;
+    }
