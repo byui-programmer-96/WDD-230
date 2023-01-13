@@ -88,13 +88,7 @@
     color: #000;
   }
   
-  main img {
-    float: left;
-    margin: 0 0 1rem 1rem;
-    border: 1px solid #333;
-    box-shadow: 0 0 15px #777;
-  }
-  
+
   #mode {
     position: absolute;
     top: 8rem;
