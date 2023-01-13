@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    background-color: rgb(10, 70, 70);
+    color:white;
   }
   body {
     display: grid;
