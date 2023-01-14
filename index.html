@@ -25,15 +25,23 @@
         <h1>Cailynn Bambas</h1>
       </header>
       <main contenteditable min-width="760px" align-items="center">
-        <button onclick="myFunction()">☀️</button>
           <div id="mode">
-            ☀️
+            ☑️
         </div>
-        <script>
-          function myFunction() {
-             var element = document.getElementById("mode");
-             element.classList.toggle("styles/darkmode.css");
-          }
+        <script>const modeButton = document.querySelector("#mode");
+          const main = document.querySelector("main");
+          
+          modeButton.addEventListener("click", () => {
+            if (modeButton.textContent.includes("☑️")) {
+              main.style.background = "#000";
+              main.style.color = "#fff";
+              modeButton.textContent = "❎";
+            } else {
+              main.style.background = "#eee";
+              main.style.color = "#000";
+              modeButton.textContent = "☑️";
+            }
+          });
           </script>
         <h2>WDD 230: Course Activity Portal</h2>
         <section class="card">
@@ -53,7 +61,6 @@
         <section class="card">
            <h3>Information</h3>
         </section>
-
       </main>
       <footer contenteditable>
         <p><span>
