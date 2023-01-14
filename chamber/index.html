@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> 🏠 Home</title>
+    <link rel="stylesheet" href="chamber\styles\base.css">
+    <title>🏠 Home</title>
 </head>
 <body>
     <header>
         <link rel="stylesheet" href="styles/menu.css">
-            <li title="home">
-                <a href="#" id="menu-button">Menu</a>
-            </li>
-            <li title="search">
-                <a href="#" class="menu-item">🔎 Search</a>
-            </li>
-            <li title="pencil">
-                <a href="#" class="menu-item">✏️ Pencil</a>
-            </li>
-            <li title="about">
-                <a href="#" class="active menu-item">👋🏽 About</a>
-            </li>
-            <li title="archive">
-                <a href="#" class="menu-item">📑 Archive</a>
-            </li>
-            <li title="contact">
-                <a href="#" class="menu-item">🤙🏽 Contact</a>
-            </li>
-        </ul>
+        <script>
+         const menubutton = document.querySelector("#menu-button");
+            const menuitems = document.querySelectorAll(".menu-item");
+            // menuitems will be a Node List of the list items
+
+            menubutton.addEventListener("click", () => {
+                menuitems.forEach((item) => item.classList.toggle("open"));
+                menubutton.classList.toggle("close");
+            });
+        </script>
+        <ul class="menu">
+           <li title="home">
+               <a href="#" id="menu-button">Menu</a>
+           </li>
+           <li title="search">
+               <a href="#" class="menu-item">🔎 Search</a>
+           </li>
+           <li title="pencil">
+               <a href="#" class="menu-item">✏️ Pencil</a>
+           </li>
+           <li title="about">
+               <a href="#" class="active menu-item">👋🏽 About</a>
+           </li>
+           <li title="archive">
+               <a href="#" class="menu-item">📑 Archive</a>
+           </li>
+           <li title="contact">
+               <a href="#" class="menu-item">🤙🏽 Contact</a>
+           </li>
+       </ul>
     </nav>
     </header>
     <br> <br>
