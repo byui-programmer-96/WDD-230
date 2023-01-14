@@ -17,6 +17,27 @@
 <body>
     <header>
        <nav>
+        <ul class="menu">
+          <link rel="stylesheet" href="styles/menu.css">
+          <script src="scripts/menu.js"></script>
+          <li title="home">
+            <a href="#" id="menu-button">Menu</a>
+          </li>
+          <li title="Home">
+            <a href="https://byui-programmer-96.github.io/WDD-230/" class="active menu-item">🔎 Home</a>
+          </li>
+          <li title="pencil">
+            <a href="#" class="active menu-item">✏️ Pencil</a>
+          </li>
+          <li title="about">
+            <a href="#" class="active menu-item">👋🏽 About</a>
+          </li>
+          <li title="archive">
+            <a href="#" class="active menu-item">📑 Archive</a>
+          </li>
+          <li title="contact">
+            <a href="#" class="active menu-item">🤙🏽 Contact</a>
+          </li>
             <a href="https://www.linkedin.com/in/cailynn-bambas-684902174/" target="_blank">Linkedin</a> &nbsp;
             <a href="https://byui.edu" target="_blank" >BYU-I website</a> &nbsp;
           </nav>
@@ -25,30 +46,12 @@
         <h1>Cailynn Bambas</h1>
       </header>
       <main contenteditable min-width="760px" align-items="center">
-          <div id="mode">
-            ☑️
-        </div>
-        <script>const modeButton = document.querySelector("#mode");
-          const main = document.querySelector("main");
-          
-          modeButton.addEventListener("click", () => {
-            if (modeButton.textContent.includes("☑️")) {
-              main.style.background = "#000";
-              main.style.color = "#fff";
-              modeButton.textContent = "❎";
-            } else {
-              main.style.background = "#eee";
-              main.style.color = "#000";
-              modeButton.textContent = "☑️";
-            }
-          });
-          </script>
         <h2>WDD 230: Course Activity Portal</h2>
         <section class="card">
             <h3>Learning Activities</h3>
             <ul style="list-style: none;">
-                <li><a src="Week 1/chamber-site-plan.html"></a>Chamber Site Plan</li>
-                <li><a></a></li>
+                <a href="Week 1/chamber-site-plan.html" target="_blank">Week 1</a>
+                <li><a href="https://codepen.io/byui-programmer-96/pen/jOpwQMb" target="_blank">Week 2</a></li>
                 <li><a></a></li>
                 <li><a></a></li>
                 <li><a></a></li>
