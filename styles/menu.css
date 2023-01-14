@@ -1,7 +1,7 @@
 .menu {
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 0;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -28,10 +28,6 @@
 	color: #fff;
 }
 
-.active {
-	font-weight: 700;
-}
-
 li a.menu-item {
 	display: none;
 }
@@ -41,5 +37,5 @@ li a.open {
 }
 
 .close::before {
-	content: "❌ ";
+	content: "❎ ";
 }
