@@ -1,4 +1,7 @@
+
 *{
-    display:grid;
-    background-color:aliceblue;
+    display:flex;
+    background-image: linear-gradient(to bottom, #cc000c 0%, white , #002D65 100%);
+    font-family: 'Space Mono', monospace;
+
 }
