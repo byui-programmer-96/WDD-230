@@ -1,24 +1,41 @@
 const list = document.querySelector(".list");
 const input = document.querySelector("input");
 const button = document.querySelector("button");
-
-button.addEventListener("click", function () {
-  let chapter = input.value;
-  input.value = "";
-
-  const listItem = document.createElement("li");
-  const listText = document.createElement("span");
-  const listBtn = document.createElement("button");
-
-  listItem.appendChild(listText);
-  listText.textContent = chapter;
-  listItem.appendChild(listBtn);
-  listBtn.innerHTML = "&#10060;";
-  list.appendChild(listItem);
-
-  listBtn.addEventListener("click", function () {
-    list.removeChild(listItem);
-  });
-
-  input.focus();
+let chaptersArray = getChapterList() || [];
+chaptersArray.forEach(chapter => {
+  displayList(chapter);
 });
+
+button.addEventListener('click', () => {
+  if (input.value != '') {
+    displayList(input.value);
+    chaptersArray.push(input.value);
+    setChapterList();
+    input.value = '';
+    input.focus();
+  }
+});
+
+function displayList(item) {
+    let li = document.createElement('li');
+    let deletebutton = document.createElement('button');
+    li.textContent = item; 
+    deletebutton.textContent = '❌';
+    li.append(deletebutton);
+    list.append(li);
+    deletebutton.addEventListener('click', function () {
+      list.removeChild(li);
+      input.focus();
+    });
+  }
+function setChapterList() {
+    localStorage.setItem('myFavBOMList', JSON.stringify(chaptersArray));
+  }
+function getChapterList() {
+    return JSON.parse(localStorage.getItem('myFavBOMList'));
+  }
+function deleteChapter(chapter) {
+    chapter = chapter.slice(0, chapter.length - 1);
+    chaptersArray = chaptersArray.filter(item => item !== chapter);
+    setChapterList();
+  }
