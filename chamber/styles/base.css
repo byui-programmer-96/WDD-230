@@ -26,3 +26,9 @@
     background: #007bb5;
     color: white;
   }
+
+  .events,
+  .weathercard,
+ .spotlights{
+    display:flex;
+ }
