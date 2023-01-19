@@ -24,8 +24,8 @@
 
 .menu li a:hover,
 .menu li:first-child a {
-	background: #267fdd;
-	color: #fff;
+	background: white;
+	color: black;
 }
 
 .active {
