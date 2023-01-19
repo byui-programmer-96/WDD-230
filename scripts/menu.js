@@ -1,15 +1,29 @@
-// Store the selected elements that we are going to use.
-const mainnav = document.querySelector(".navigation");
-const hambutton = document.querySelector("#menu");
+const menubutton = document.querySelector("#menu-button");
+const menuitems = document.querySelectorAll(".menu-item");
+// menuitems will be a Node List of the list items
 
-// Add a simple arrow function that listens for the <li> hamburger button click event.
-// When clicked, the <ul class="navigation">'s class list toggle'
-hambutton.addEventListener(
-	"click",
-	() => {
-		mainnav.classList.toggle("responsive");
-	},
-	false
-);
+menubutton.addEventListener("click", () => {
+	menuitems.forEach((item) => item.classList.toggle("open"));
+	menubutton.classList.toggle("close");
+});
 
-// What does toggle mean? Instead of add and remove, toggle means add the class name (the parameter, which in this case is named 'responsive') if it does not currently exist, and remove the
+// Get the container element
+var btnContainer = document.getElementById("myDIV");
+
+// Get all buttons with class="btn" inside the container
+var btns = btnContainer.getElementsByClassName("btn");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+	btns[i].addEventListener("click", function () {
+		var current = document.getElementsByClassName("active");
+
+		// If there's no active class
+		if (current.length > 0) {
+			current[0].className = current[0].className.replace(" active", "");
+		}
+
+		// Add the active class to the current/clicked button
+		this.className += " active";
+	});
+}
