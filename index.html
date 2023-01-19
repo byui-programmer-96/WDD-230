@@ -133,13 +133,30 @@
         <section class="card">
            <h3>Information</h3>
            <h4>Weather:</h4>
-            <p><iframe>
-              width="450"
-              height="250"
-              frameborder="0" style="border:0"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps/embed/v1/streetview?key=AIzaSyAy9MS_gnt-leZ-N9bBnh3Rq74DbxctHDY&q=record+stores+in+Seattle&origin=place_id:ChIJU5WUOH8EZIgRGhGQoJrhoUM"
-            </iframe></p>
+            <p><script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+              <link rel="stylesheet" type="text/css" href="./style.css" />
+              <script type="module" src="./index.js"></script>
+            </head>
+              <div style="display: none">
+                <input
+                  id="pac-input"
+                  class="controls"
+                  type="text"
+                  placeholder="Lebanon, TN"
+                />
+              </div>
+              <div id="map"></div>
+              <div id="infowindow-content">
+                <span id="place-name" class="title"></span><br />
+                <strong>Lebanon,TN</strong> <span id="place-id"></span><br />
+                <span id="place-address"></span>
+              </div>
+              <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+                defer
+              ></script>
+          </p>
         </section>
       </main>
       <footer contenteditable>
