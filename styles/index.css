@@ -32,6 +32,7 @@
     border-style: groove;
     height: 100%;
     padding: 1rem;
+    grid-column: 2 / 3;
   }
   
   aside {
@@ -52,11 +53,7 @@
   .left-sidebar {
     grid-column: 1 / 2;
   }
-  
-  main {
-    grid-column: 2 / 3;
-  }
-  
+
   .right-sidebar {
     grid-column: 3 / 4;
   }
