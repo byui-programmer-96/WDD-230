@@ -1,4 +1,6 @@
-// determine if this is the first visit or display the number of visits.
+const todayDisplay = document.querySelector(".today");
+const visitsDisplay = document.querySelector(".visits");
+
 if (numVisits !== 0) {
 	visitsDisplay.textContent = numVisits;
 } else {
