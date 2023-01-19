@@ -19,7 +19,7 @@ main {
 }
 
 main img {
-	float: right;
+	float: left;
 	margin: 0 0 1rem 1rem;
 	border: 1px solid #333;
 	box-shadow: 0 0 15px #777;
@@ -28,7 +28,7 @@ main img {
 #mode {
 	position: absolute;
 	top: 1rem;
-	right: 1rem;
+	left: 1rem;
 	font-size: 3rem;
 	cursor: pointer;
 }
