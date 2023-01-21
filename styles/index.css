@@ -58,13 +58,6 @@
     grid-column: 3 / 4;
   }
   
-  footer {
-  
-    padding: 2rem;
-    text-align: center;
-    grid-column: 1 / 4;
-  }
-  
   .left-sidebar,
   .right-sidebar {
     padding: 1rem;
