@@ -15,21 +15,34 @@
     margin: 5px 2px;
   }
   
-  .fa:hover {
+.fa:hover {
       opacity: 0.7;
   }
   
-  .fa-facebook {
+.fa-facebook {
     background: #3B5998;
     color: white;
   }
-  .fa-linkedin {
+.fa-linkedin {
     background: #007bb5;
     color: white;
   }
 
-  .events,
-  .weathercard,
- .spotlights{
+.events,
+.weathercard,
+.spotlights{
     display:flex;
     font-size:14px;}
+
+.left-sidebar {
+  background: white;
+  grid-column: 1 / 2;
+  }
+.left-sidebar
+{
+    padding: 1rem;
+  }
+main {
+  background:#002d65;
+  grid-column: 2 / 3;
+  }  
