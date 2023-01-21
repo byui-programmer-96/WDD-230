@@ -14,7 +14,7 @@
 
   
   header {
-    display:flex;
+    display:grid;
     padding: 2rem;
     grid-column: 1 / 3;
   }
