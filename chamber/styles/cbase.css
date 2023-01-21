@@ -1,8 +1,9 @@
 
 *{
-    display:flex;
-    background-image: linear-gradient(to bottom, #cc000c 0%, white , #002D65 100%);
+    background-color:#002D65 ;
     font-family: 'Space Mono', monospace;
+    color:white;
+    
 
 }
 .fa {
@@ -31,4 +32,6 @@
   .weathercard,
  .spotlights{
     display:flex;
+    font-size:14px;
+    
  }
