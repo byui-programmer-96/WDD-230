@@ -3,9 +3,13 @@
     background-color:#002D65 ;
     font-family: 'Space Mono', monospace;
     color:white;
-    
-
+}   
+body{
+  display: grid;
+  height: 100vh;
+  grid-template: auto 1fr auto / 300px 1fr auto;
 }
+
 .fa {
     padding: 20px;
     font-size: 30px;
@@ -35,7 +39,6 @@
     font-size:14px;}
 
 .left-sidebar {
-  background: white;
   grid-column: 1 / 2;
   }
 .left-sidebar
@@ -46,3 +49,28 @@ main {
   background:#002d65;
   grid-column: 2 / 3;
   }  
+footer{
+  padding: 0rem;
+  text-align: center;
+  grid-column: 1 / 4;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
