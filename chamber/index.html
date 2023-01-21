@@ -5,39 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/cbase.css">
+    <link rel="logo" herf="images/Nash-flag.png" type="image/x-icon">
     <title>🏠 Home</title>
 </head>
 <body>
+  <a href="#"><img id="logo" src="images/Nash-flag.png" width="100" height="100" alt="Nash flag"></a>
   <main>
     <header> 
       <h4>Nashville Chamber of Commerce</h4>
+      <hr>
+      <nav>
+        <link rel="stylesheet" href="styles/cmenu.css">
+        <ul class="navigation">
+          <li><a id="menu" href="#"></a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <script src="scripts/cmenu.js"></script>
+      <hr>
       <div class="social media">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-linkedin"></a>
       </div>    
-          <link rel="stylesheet" href="styles/menu.css">
-          <ul class="menu">
-            <li title="home">
-              <a href="#" id="menu-button">Menu</a>
-            </li>
-            <li title="search">
-              <a href="#" class="active menu-item" class="btn">🔎</a>
-            </li>
-            <li title="pencil">
-              <a href="#" class="active menu-item" class="btn">✏️</a>
-            </li>
-            <li title="about">
-              <a href="#" class="active menu-item" class="btn">👋🏽</a>
-            </li>
-            <li title="archive">
-              <a href="#" class="active menu-item" class="btn">📑</a>
-            </li>
-            <li title="contact">
-              <a href="#" class="active menu-item" class="btn">🤙🏽</a>
-            </li>
-          </ul>
-          <script src="scripts/menu.js"></script>
     </header>
     <link rel="stylesheet" href="styles/hero.css">
     <div class="hero">
@@ -50,22 +46,32 @@
       </div>
     </div>
     <div>
-  <section class="events"><b>Events:</b></section>
-  <p>
-    <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis proin 
-      sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
-  </p>
+  <section class="events"><b>Events|🧾</b></section>
+  <p>Ribbon Cutting - Music City Financial Academy, LLC </p>
   <section class="weather card"><b>Current weather:</b></section>
   <p><div id="idc6bdb4ebd602" a='{"t":"s","v":"1.2","lang":"en","locs":[],"ssot":"f","sics":"ds","cbkg":"#FFFFFF00","cfnt":"#000000","slgp":"5","sfnt":"a","sdr":"lr"}'><a href="https://sharpweather.com/widgets/">HTML Weather widget for website</a> by sharpweather.com</div><script async src="https://static1.sharpweather.com/widgetjs/?id=idc6bdb4ebd602"></script>
   </p>
-  <section class="spotlights"><b>Spotlights:</b></section>
+  <section class="spotlights"><b>Spotlights|🔦</b></section>
   <p>Lorem ipsum dolor sit amet adipiscing bibendum sem orci tempus aliquet gravida, orci amet iaculis aptent blandit quam accumsan donec in facilisis, cursus ante curabitur aliquet condimentum tincidunt facilisis non cubilia lorem et pretium aliquam phasellus ipsum metus quisque auctor tristique donec nibh, praesent congue ultricies aenean ornare ligula sagittis
      proin sed vestibulum purus tempus aenean neque aliquam curae vivamus purus egestas ligula tincidunt nullam.</p>
 </div>       
 </main> 
-
 </body>
-<footer>
+<hr>
+<footer> 
+  <section>
+    <img src="https://www.nashvillechamber.com/assets/dist/images/full-logo.png" alt="Nashville Chamber of Commerce Logo" width="90">
+    <p>
+      5347 Tyson Trail
+      Nashville 
+      07308
+    </p>
+  </section>
+  <p>info@nashvillecommerce.com</p>
+  <p>+1 615-000-0000</p>
+  <p>Location Map📍 </p>
+  <hr>
+ 
     <p><span>
         &copy;<script>document.write(new Date().getFullYear());</script> Cailynn Bambas 🇺🇸
           </span></p>
@@ -75,6 +81,8 @@
                 document.getElementById("lastModified").innerHTML = "Last Modified : " + date;
             </script>
           </p>
+
+
 </footer>
 <script src="scripts/dates.js"></script>
 </html>
