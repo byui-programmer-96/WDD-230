@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 main {
 	max-width: 670px;
@@ -8,7 +8,7 @@ main {
 .hero {
 	margin: 10px auto;
 	position: relative;
-	border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0,0,0,.1);
 	height: 300px;
 }
 
@@ -22,8 +22,8 @@ main {
 	position: absolute;
 	top: 30px;
 	left: 30px;
-	background: radial-gradient(#fff, #4d5b97);
-	border: 1px solid rgba(0, 0, 0, 0.75);
+	background: radial-gradient(#fff, blue);
+	border: 1px solid rgba(0,0,0,.75);
 	padding: 1.5rem;
 	box-shadow: 0 0 3rem #fff;
 	opacity: 0.75;
@@ -32,8 +32,9 @@ main {
 
 .herolabel p {
 	margin: 0;
-	padding: 0.25rem;
+	padding: .25rem;
 	font-weight: 700;
 	font-size: 2rem;
-	font-family: "Great Vibes", serif;
+	font-family:"Great Vibes", serif;
 }
+
