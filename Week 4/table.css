@@ -1,47 +1,61 @@
-:root {
-	--back: hsla(150, 50%, 30%, 1);
-  --back2: hsla(150, 50%, 30%, .5);
-  --foredark: hsla(0,0%,10%,1);
-	--forelight: hsla(0,0%,100%,1);
-	--border: hsl(0,0%,20%);
-	--borderlight: hsl(0,0%,33%);
-	--shadow: hsl(0,0%,50%);
-	--zebra: hsl(0, 0%, 93%, 1);
-}
-
-table {
-	margin: 10px auto;
-	border: thin solid var(--border);
-	box-shadow: 0 0 7px var(--shadow);
-	border-collapse: collapse;
-}
-
-caption {
-  padding: 10px;
-  caption-side: bottom;
-	color: var(--back);
-	font-size: .85rem;
-}
-
-tr:first-child th, .highlight {
-	background-color: var(--back);
-	color: var(--forelight);
-}
-
-th, td {
-	padding: 7px 15px;
-	border: 1px solid var(--borderlight);
-}
-
-th {
-	background-color: var(--back2);
-	font-size: larger;
-}
-
-td {
-	text-align: center;
-}
-
-tbody tr:nth-child(even) {
-	background-color: var(--zebra);
-}
+div.steelBlueCols {
+    border: 4px solid #555555;
+    background-color: #555555;
+    width: 400px;
+    text-align: center;
+    border-collapse: collapse;
+  }
+  .divTable.steelBlueCols .divTableCell, .divTable.steelBlueCols .divTableHead {
+    border: 1px solid #555555;
+    padding: 5px 10px;
+  }
+  .divTable.steelBlueCols .divTableBody .divTableCell {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+  }
+  .divTable.steelBlueCols .divTableCell:nth-child(even) {
+    background: #398AA4;
+  }
+  .divTable.steelBlueCols .divTableHeading {
+    background: #398AA4;
+    border-bottom: 10px solid #398AA4;
+  }
+  .divTable.steelBlueCols .divTableHeading .divTableHead {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: left;
+    border-left: 2px solid #398AA4;
+  }
+  .divTable.steelBlueCols .divTableHeading .divTableHead:first-child {
+    border-left: none;
+  }
+  
+  .steelBlueCols .tableFootStyle {
+    font-size: 13px;
+  }
+  .steelBlueCols .tableFootStyle .links {
+       text-align: right;
+  }
+  .steelBlueCols .tableFootStyle .links a{
+    display: inline-block;
+    background: #FFFFFF;
+    color: #398AA4;
+    padding: 2px 8px;
+    border-radius: 5px;
+  }
+  .steelBlueCols.outerTableFooter {
+    border-top: none;
+  }
+  .steelBlueCols.outerTableFooter .tableFootStyle {
+    padding: 3px 5px; 
+  }
+  /* DivTable.com */
+  .divTable{ display: table; }
+  .divTableRow { display: table-row; }
+  .divTableHeading { display: table-header-group;}
+  .divTableCell, .divTableHead { display: table-cell;}
+  .divTableHeading { display: table-header-group;}
+  .divTableFoot { display: table-footer-group;}
+  .divTableBody { display: table-row-group;}
