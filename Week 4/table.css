@@ -15,18 +15,18 @@ div.steelBlueCols {
     color: #FFFFFF;
   }
   .divTable.steelBlueCols .divTableCell:nth-child(even) {
-    background: #398AA4;
+    background: #9932cc;
   }
   .divTable.steelBlueCols .divTableHeading {
-    background: #398AA4;
-    border-bottom: 10px solid #398AA4;
+    background: #9932cc;
+    border-bottom: 10px solid #9932cc;
   }
   .divTable.steelBlueCols .divTableHeading .divTableHead {
     font-size: 15px;
     font-weight: bold;
     color: #FFFFFF;
     text-align: left;
-    border-left: 2px solid #398AA4;
+    border-left: 2px solid #9932cc;
   }
   .divTable.steelBlueCols .divTableHeading .divTableHead:first-child {
     border-left: none;
@@ -41,7 +41,7 @@ div.steelBlueCols {
   .steelBlueCols .tableFootStyle .links a{
     display: inline-block;
     background: #FFFFFF;
-    color: #398AA4;
+    color: #9932cc;
     padding: 2px 8px;
     border-radius: 5px;
   }
