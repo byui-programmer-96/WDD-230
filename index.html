@@ -98,11 +98,34 @@
       </main>
       &nbsp;
       <div class="mapouter"><div class="gmap_canvas"><iframe width="700" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Lebanon,%20TN&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://123movies-to.org"></a><br><style>.mapouter{position:relative;text-align:right;height:300px;width:300px;}</style><a href="https://www.embedgooglemap.net"></a>
-        <style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style></div></div>
+      <style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:300px;}</style></div></div>
+    <hr>
+    <div class="contact">
+        <h1>📧 Send Us a Message</h1>
+        <form method="get">
+          <div id="formmessage"></div>
+          <label for="fullname">Name:</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="Your full name" />
+          <label for="email">Email address:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" required oninvalid="this.setCustomValidity('Please enter a valid phone number!)" oninput="this.setCustomValidity('')" / />
+          <label for="keyphrase">Username:</label>
+          <input type="text" id="keyphrase" name="keyphrase" pattern="[a-z]*" required /> 
+          <label for="keyphrase2">Re-enter Username:</label>
+          <input type="text" id="keyphrase2" name="keyphrase2" />
+          <label for="comments">Message:</label>
+          <textarea id="comments" name="comments" required></textarea>
+          <button id="btnSubmit" type="submit">Send Message</button>
+          <input type="hidden" value="43aster">
+        </form>
+    </div>
+    <script src="scripts/contacts.js"></script>
+    <hr>
 </body>
 <footer>
   <p><span>
-      &copy;<script>document.write(new Date().getFullYear());</script> Cailynn Bambas 🇺🇸
+      &copy;<script>,document.write(new Date().getFullYear());</script> Cailynn Bambas 🇺🇸
     </span></p>
     <p class="highlight" id="lastModified">
       <script>
