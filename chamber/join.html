@@ -10,33 +10,65 @@
 </head>
 <body> 
     <header>
-      <h4>Nashville Chamber of Commerce</h4><a href="#"><img id="logo" src="images/Nash-flag.png" width="100" height="100" alt="Nash flag"></a>
-      <hr>
-      <nav>
-        <link rel="stylesheet" href="styles/cmenu.css">
-        <ul class="navigation">
-          <li><a id="menu" href="#"></a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="discover.html">Discover</a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-      </nav>
-      <script src="scripts/cmenu.js"></script>
-      <hr>
-      <div class="social media">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-      </div>
-    </header>
+        <h4>Nashville Chamber of Commerce</h4><a href="#"><img id="logo" src="images/Nash-flag.png" width="100" height="100" alt="Nash flag"></a>
+        <hr>
+        <nav>
+          <link rel="stylesheet" href="styles/cmenu.css">
+          <ul class="navigation">
+            <li><a id="menu" href="#"></a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </nav>
+        <script src="scripts/cmenu.js"></script>
+        <hr>
+        <div class="social media">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-linkedin"></a>
+        </div>
+      </header>
   <main>
-   
-    
-  </main>
+    <link rel="stylesheet" href="styles/form.css">
+    <form action="#" id="myForm" action="welcome.php" method="post">
+        <fieldset>
+          <legend>Registration</legend>
+          <div class="formBox">
+            <label for="first">First Name</label><input type="text" id="first" name="first" autocomplete="off" autocapitalize="on" />
+          </div>
+          <div class="formBox">
+            <label for="last">Last Name</label><input type="text" id="last" name="last" required autocomplete="off" autocapitalize="on" />
+          </div>
+          <div class="formBox">
+            <label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="off" />
+          </div>
+          <div class="formBox">
+            <label for="pass">Website</label><input type="password" id="pass" name="pass" autocomplete="off" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Course Information</legend>
+          <div class="formBox">
+            <legend>Audience<span aria-label="required">*</span></legend>
+            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Beginner</label>
+            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">intermediate</label>
+            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Advance</label>
+        </fieldset>
+        <fieldset>
+          <legend>Funding</legend>
+          <div class="formBox">
+        </fieldset>
+      </form>
+      <div class="formBox">
+        <button id="btnSubmit">Send</button>
+      </div>        
+<script src="scripts/form.js"></script>
+</main>
 </body>
 <hr>
 <footer>
