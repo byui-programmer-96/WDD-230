@@ -10,22 +10,6 @@
 </head>
 <body> 
     <header>
-        <h4>Nashville Chamber of Commerce</h4><a href="#"><img id="logo" src="images/Nash-flag.png" width="100" height="100" alt="Nash flag"></a>
-        <hr>
-        <nav>
-          <link rel="stylesheet" href="styles/cmenu.css">
-          <ul class="navigation">
-            <li><a id="menu" href="#"></a></li>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="discover.html">Discover</a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
-        </nav>
-        <script src="scripts/cmenu.js"></script>
         <hr>
         <div class="social media">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,45 +18,94 @@
         </div>
       </header>
   <main>
-    <link rel="stylesheet" href="styles/form.css">
-    <form action="#" id="myForm" action="welcome.php" method="post">
-        <fieldset>
-          <legend>Registration</legend>
-          <div class="formBox">
-            <label for="first">First Name</label><input type="text" id="first" name="first" autocomplete="off" autocapitalize="on" />
+    <fieldset>
+      <link rel="stylesheet" href="styles/form2.css">
+      <h1><b>📩Registration:</b></h1>
+      <form method="get" action="/thankyou.html" target="_blank">
+        <div id="formmessage"></div>
+        <label for="fullname">Name:*</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="Your full name" />
+        <label for="email">Email address:*</label>
+        <input type="email" id="email" name="email" required />
+        <label for="phone">Cell Phone number:*</label>
+        <input type="tel" id="phone" name="phone" required oninvalid="this.setCustomValidity('Please enter a valid phone number!)" oninput="this.setCustomValidity('')" / />
+        <label for="keyphrase">Username:*</label>
+        <input type="text" id="keyphrase" name="keyphrase" pattern="[a-z]*" required />
+        <label for="keyphrase2">Re-enter Username:*</label>
+        <input type="text" id="keyphrase2" name="keyphrase2" />
+        <label>Business Position Title:</label>
+        <input type="text" pattern="[A-Za-z]{7}">
+        <label>Business Name/Title:*</label>
+        <input type="text" required>
+  
+        <label for="comments">Message:*</label>
+        <textarea id="comments" name="comments" required></textarea>
+    </fieldset>
+    </form>
+    <fieldset class="member">
+      <b>Membership:</b>
+      <div class="divTable steelBlueCols">
+        <div class="divTableHeading">
+          <div class="divTableRow">
+            <div class="divTableHead"></div>
+            <div class="divTableHead">NP|Membership*</div>
+            <div class="divTableHead">Premium</div>
+            <div class="divTableHead">Deluxe</div>
+            <div class="divTableHead">Deluxe</div>
           </div>
-          <div class="formBox">
-            <label for="last">Last Name</label><input type="text" id="last" name="last" required autocomplete="off" autocapitalize="on" />
+        </div>
+        <div class="divTableBody">
+          <div class="divTableRow">
+            <div class="divTableCell">special events</div>
+            <div class="divTableCell">✔️</div>
+            <div class="divTableCell">❌</div>
+            <div class="divTableCell">❌</div>
+            <div class="divTableCell">❌</div>
           </div>
-          <div class="formBox">
-            <label for="email">Email</label><input type="email" id="email" name="email" required autocomplete="off" />
+          <div class="divTableRow">
+            <div class="divTableCell">training</div>
+            <div class="divTableCell">✔️</div>
+            <div class="divTableCell">✔️</div>
+            <div class="divTableCell">❌</div>
+            <div class="divTableCell">❌</div>
           </div>
-          <div class="formBox">
-            <label for="pass">Website</label><input type="password" id="pass" name="pass" autocomplete="off" />
+          <div class="divTableRow">
+            <div class="divTableCell">advertising**</div>
+            <div class="divTableCell">❌</div>
+            <div class="divTableCell">❌</div>
+            <div class="divTableCell">❌</div>
+            <div class="divTableCell">❌</div>
           </div>
-        </fieldset>
-        <fieldset>
-          <legend>Course Information</legend>
-          <div class="formBox">
-            <legend>Audience<span aria-label="required">*</span></legend>
-            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Beginner</label>
-            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">intermediate</label>
-            <input type="radio" required name="driver" id="r1" value="yes"><label for="r1">Advance</label>
-        </fieldset>
-        <fieldset>
-          <legend>Funding</legend>
-          <div class="formBox">
-        </fieldset>
-      </form>
-      <div class="formBox">
-        <button id="btnSubmit" onclick="window.location.href='thankyou.html'">Send</button>
-      </div>        
-<script src="scripts/form.js"></script>
-</main>
+          <div class="divTableRow">
+            <div class="divTableCell">event discounts</div>
+            <div class="divTableCell">✔️</div>
+            <div class="divTableCell">✔️</div>
+            <div class="divTableCell">✔️</div>
+            <div class="divTableCell">✔️</div>
+          </div>
+        </div>
+  
+      </div>
+      <caption>*NP Membership is for non profit organizations and there is no fee</caption>
+      <br>
+      <caption>**a spotlight positions on the home page</caption>
+      <br>
+      <lable>business description*</lable>
+      <textarea id="comments" name="comments" required></textarea>
+    </fieldset>
+    <caption>*briefly describe your business</caption>
+    <br>
+    <input type="hidden" name="date" value="CurrentTime">
+    <input type="hidden" name="time" value="CurrentDate">
+    <button id="btnSubmit" type="submit">Join the Chamber</button>
+    <input type="hidden" value="Date">
+  </main>
+  <script src="scripts/form2.js"></script>
 </body>
-<hr>
+
 <footer>
   <section>
+    <hr>
     <img src="https://www.nashvillechamber.com/assets/dist/images/full-logo.png" alt="Nashville Chamber of Commerce Logo" width="90">
     <p>
       5347 Tyson Trail
