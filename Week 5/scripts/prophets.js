@@ -1,209 +1,131 @@
-async function getProphetData() {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.table(data.prophets);
-    displayProphets(data.prophets);
-  }
+const url =
+	"https://brotherblazzard.github.io/canvas-content/latter-day-prophets.json";
 
-  const displayProphets = (prophets) => {
-    
-{
-    prophets.forEach((prophet) => {
+const getProphets = async (filter = "all") => {
+	let prophets = await jsonFetch(url);
 
-    });
+	switch (filter) {
+		case "idaho":
+			prophets = prophets.filter((prophet) => prophet.birthplace === "Idaho");
+			break;
+		case "nonus":
+			prophets = prophets.filter((prophet) => prophet.birthplace === "England");
+			break;
+		case "ten":
+			prophets = prophets.filter((prophet) => prophet.length >= 15);
+			break;
+		case "childs":
+			prophets = prophets.filter((prophet) => prophet.numofchildren < 5);
+			break;
+		case "childl":
+			prophets = prophets.filter((prophet) => prophet.numofchildren >= 10);
+			break;
+		case "old":
+			prophets = prophets.filter(
+				(prophet) => getAgeAtDeathInYears(prophet.birthdate, prophet.death) >= 95
+			);
+			break;
+		default:
+			break;
+	}
 
-    "prophets" [
-        {
-            "name": "Joseph",
-            "lastname": "Smith",
-            "birthdate": "23 December 1805",
-            "death": "27 June 1844",
-            "length": 14,
-            "order": 1,
-            "birthplace": "Vermont",
-            "numofchildren": 11,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/church-history/joseph-smith-art-lds-37715-gallery.jpg"
-        },
-        {
-            "name": "Brigham",
-            "lastname": "Young",
-            "birthdate": "01 June 1801",
-            "death": "29 August 1877",
-            "length": 30,
-            "order": 2,
-            "birthplace": "Vermont",
-            "numofchildren": 56,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/brigham-young-82908-gallery.jpg"
-        },
-        {
-            "name": "John",
-            "lastname": "Taylor",
-            "birthdate": "01 November 1808",
-            "death": "25 July 1887",
-            "length": 6,
-            "order": 3,
-            "birthplace": "England",
-            "numofchildren": 34,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/john-taylor-82909-gallery.jpg"
-        },
-        {
-            "name": "Wilford",
-            "lastname": "Woodruff",
-            "birthdate": "01 March 1807",
-            "death": "02 September 1898",
-            "length": 9,
-            "order": 4,
-            "birthplace": "Connecticut",
-            "numofchildren": 34,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/wilford-woodruff-82910-gallery.jpg"
-        },
-        {
-            "name": "Lorenzo",
-            "lastname": "Snow",
-            "birthdate": "03 April 1814",
-            "death": "19 October 1901",
-            "length": 3,
-            "order": 5,
-            "birthplace": "Ohio",
-            "numofchildren": 42,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/lorenzo-snow-82911-gallery.jpg"
-        },
-        {
-            "name": "Joseph F.",
-            "lastname": "Smith",
-            "birthdate": "12 November 1838",
-            "death": "19 November 1918",
-            "length": 17,
-            "order": 6,
-            "birthplace": "Missouri",
-            "numofchildren": 48,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/joseph-f-smith-82912-gallery.jpg"
-        },
-        {
-            "name": "Heber J.",
-            "lastname": "Grant",
-            "birthdate": "22 November 1856",
-            "death": "14 May 1945",
-            "length": 23,
-            "order": 7,
-            "birthplace": "Utah",
-            "numofchildren": 12,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/heber-j-grant-82913-gallery.jpg"
-        },
-        {
-            "name": "George A.",
-            "lastname": "Smith",
-            "birthdate": "4 April 1870",
-            "death": "4 April 1951",
-            "length": 6,
-            "order": 8,
-            "birthplace": "Utah",
-            "numofchildren": 3,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/george-albert-smith-82914-gallery.jpg"
-        },
-        {
-            "name": "David O.",
-            "lastname": "McKay",
-            "birthdate": "8 September 1873",
-            "death": "18 January 1970",
-            "length": 19,
-            "order": 9,
-            "birthplace": "Utah",
-            "numofchildren": 7,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/david-o-mckay-82915-gallery.jpg"
-        },
-        {
-            "name": "Joseph Fielding",
-            "lastname": "Smith",
-            "birthdate": "19 July 1876",
-            "death": "2 July 1972",
-            "length": 1,
-            "order": 10,
-            "birthplace": "Utah",
-            "numofchildren": 11,
-            "imageurl": "https://media.ldscdn.org/images/media-library/teachings-of-presidents-of-the-church/joseph-fielding-smith/joseph-fielding-smith-82916-gallery.jpg"
-        },
-        {
-            "name": "Harold B.",
-            "lastname": "Lee",
-            "birthdate": "28 March 1899",
-            "death": "26 December 1973",
-            "length": 1,
-            "order": 11,
-            "birthplace": "Idaho",
-            "numofchildren": 2,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/harold-b-lee-37763-gallery.jpg"
-        },
-        {
-            "name": "Spencer W.",
-            "lastname": "Kimball",
-            "birthdate": "28 March 1895",
-            "death": "5 November 1985",
-            "length": 12,
-            "order": 12,
-            "birthplace": "Utah",
-            "numofchildren": 4,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/spencer-w-kimball-82918-gallery.jpg"
-        },
-        {
-            "name": "Ezra Taft",
-            "lastname": "Benson",
-            "birthdate": "4 August 1899",
-            "death": "30 May 1994",
-            "length": 9,
-            "order": 13,
-            "birthplace": "Idaho",
-            "numofchildren": 6,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/lds-president-ezra-taft-benson-83244-gallery.jpg"
-        },
-        {
-            "name": "Howard W.",
-            "lastname": "Hunter",
-            "birthdate": "14 November 1907",
-            "death": "3 March 1995",
-            "length": 1,
-            "order": 14,
-            "birthplace": "Idaho",
-            "numofchildren": 3,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/lds-president-howard-w-hunter-83247-gallery-notice.jpg"
-        },
-        {
-            "name": "Gordon B.",
-            "lastname": "Hinckley",
-            "birthdate": "23 June 1910",
-            "death": "27 January 2008",
-            "length": 13,
-            "order": 15,
-            "birthplace": "Utah",
-            "numofchildren": 5,
-            "imageurl": "https://media.ldscdn.org/images/media-library/gospel-art/latter-day-prophets/lds-president-gordon-b-hinckley-83335-gallery.jpg"
-        },
-        {
-            "name": "Thomas S.",
-            "lastname": "Monson",
-            "birthdate": "21 August 1927",
-            "death": "2 January 2018",
-            "length": 10,
-            "order": 16,
-            "birthplace": "Utah",
-            "numofchildren": 3,
-            "imageurl": "https://media.ldscdn.org/images/media-library/church-leadership/first-presidency-and-quorum-of-the-twelve-apostles/president-thomas-s-monson-lds-560823-gallery.jpg"
-        },
-        {
-            "name": "Russell M.",
-            "lastname": "Nelson",
-            "birthdate": "9 September 1924",
-            "death": null,
-            "length": 2,
-            "order": 17,
-            "birthplace": "Utah",
-            "numofchildren": 10,
-            "imageurl": "https://media.ldscdn.org/images/media-library/church-leadership/first-presidency-and-quorum-of-the-twelve-apostles/russell-nelson-official-portrait-2018-2044670-gallery.jpg"
-        }
-    ]
+	displayProphets(prophets);
+};
 
+async function jsonFetch(url) {
+	const response = await fetch(url);
+	const data = await response.json();
+	return data.prophets;
 }
 
-  }
-  
-  getProphetData();
+const displayProphets = (prophets) => {
+	const cards = document.querySelector("div.cards");
+	cards.innerHTML = "";
+
+	prophets.forEach((prophet) => {
+		let card = document.createElement("section");
+		let h2 = document.createElement("h2");
+		let stats = document.createElement("div");
+		stats.classList.add("stats");
+		let date = document.createElement("p");
+		let death = document.createElement("p");
+		let ageatdeath = document.createElement("p");
+		let length = document.createElement("p");
+		let place = document.createElement("p");
+		let num = document.createElement("p");
+		let portrait = document.createElement("img");
+
+		h2.textContent = `${prophet.name} ${prophet.lastname}`;
+		date.innerHTML = `<span class="label">Birth:</span> ${prophet.birthdate}`;
+		place.innerHTML = `<span class="label">Place:</span> ${prophet.birthplace}`;
+		num.innerHTML = `<span class="label">Children:</span> ${prophet.numofchildren}`;
+		length.innerHTML = `<span class="label">Prophet Years:</span> ${prophet.length}`;
+		death.innerHTML = `<span class="label">Death:</span> ${prophet.death}`;
+		ageatdeath.innerHTML = `<span class="label">Age:</span> ${getAgeAtDeathInYears(
+			prophet.birthdate,
+			prophet.death
+		)}`;
+
+		portrait.setAttribute("src", prophet.imageurl);
+		portrait.setAttribute(
+			"alt",
+			`${prophet.name} ${prophet.lastname} - ${prophet.order} Latter-day Prophet`
+		);
+		portrait.setAttribute("loading", "lazy");
+		portrait.setAttribute("width", "340");
+		portrait.setAttribute("height", "440");
+
+		stats.appendChild(date);
+		stats.appendChild(place);
+		stats.appendChild(num);
+		stats.appendChild(length);
+		stats.appendChild(death);
+		stats.appendChild(ageatdeath);
+
+		card.appendChild(h2);
+		card.appendChild(stats);
+		card.appendChild(portrait);
+
+		cards.appendChild(card);
+	});
+};
+
+getProphets();
+
+// buttons
+document.querySelector("#all").addEventListener("click", () => {
+	getProphets("all");
+});
+
+document.querySelector("#idaho").addEventListener("click", () => {
+	getProphets("idaho");
+});
+
+document.querySelector("#nonus").addEventListener("click", () => {
+	getProphets("nonus");
+});
+
+document.querySelector("#ten").addEventListener("click", () => {
+	getProphets("ten");
+});
+
+document.querySelector("#childs").addEventListener("click", () => {
+	getProphets("childs");
+});
+
+document.querySelector("#childl").addEventListener("click", () => {
+	getProphets("childl");
+});
+
+document.querySelector("#old").addEventListener("click", () => {
+	getProphets("old");
+});
+
+function getAgeAtDeathInYears(birthdate, deathdate) {
+	let birth = new Date(birthdate);
+	let death = new Date(deathdate);
+	if (deathdate === null) {
+		death = new Date();
+	}
+	return Math.floor((death - birth) / (365 * 24 * 60 * 60 * 1000));
+}
