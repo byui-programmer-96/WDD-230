@@ -97,3 +97,25 @@ button {
 	text-align: right;
 	color: yellow;
 }
+
+
+/* --------Tablet View Size------- */
+@media only screen and (min-width: 700px) {
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+}
+
+
+/* --------Desktop View Size------- */
+@media only screen and (min-width: 1280px) {
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    
+}
