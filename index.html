@@ -103,15 +103,15 @@
         <form method="get">
           <div id="formmessage"></div>
           <label for="fullname">Name:</label>
-          <input type="text" id="fullname" name="fullname" required placeholder="Your full name" />
+          <input type="text" id="fullname" name="fullname" required placeholder="Your full name"/>
           <label for="email">Email address:</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required/>
           <label for="phone">Phone number:</label>
           <input type="tel" id="phone" name="phone" required oninvalid="this.setCustomValidity('Please enter a valid phone number!)" oninput="this.setCustomValidity('')" / />
           <label for="keyphrase">Username:</label>
-          <input type="text" id="keyphrase" name="keyphrase" pattern="[a-z]*" required /> 
+          <input type="text" id="keyphrase" name="keyphrase" pattern="[a-z]*" required/> 
           <label for="keyphrase2">Re-enter Username:</label>
-          <input type="text" id="keyphrase2" name="keyphrase2" />
+          <input type="text" id="keyphrase2" name="keyphrase2"/>
           <label for="comments">Message:</label>
           <textarea id="comments" name="comments" required></textarea>
           <button id="btnSubmit" type="submit" onclick="window.location.href='https://byui-programmer-96.github.io/WDD-230/chamber/thankyou.html'">Send Message</button>
