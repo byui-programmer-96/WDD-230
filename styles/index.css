@@ -1,74 +1,335 @@
-* {
-    box-sizing: border-box;
-    background-color: rgb(10, 70, 70);
-    color:white;
-    font-family: 'Space Mono', monospace;
-  
-  }
-body {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto auto 1fr auto;
-  }
-header {
-    display:grid;
-    padding: 2rem;
-    grid-column: 1 / 3;
-  }
-  
-nav {
-    border-style: groove;
-    display:grid;
-    flex-direction: column;
-    align-items: center;
-    grid-column: 1 / 3;
-    padding: 1rem;
-    gap:1rem;
-  }
-  
-main {
-    border-style: groove;
-    height: 100%;
-    padding: 1rem;
-    grid-column: 2 / 3;
-  }
-  
-aside {
-    grid-column: 2 / 3;
-    padding: 1rem;
-  }
-body {
-    display: grid;
-    height: 100vh;
-    grid-template: auto 1fr auto / 300px 1fr auto;
-  }
-  
-header {
-    padding: 2rem;
-    grid-column: 1 / 4;
-  }
-  
-.left-sidebar {
-    grid-column: 1 / 2;
-  }
+:root{
+  --main-color: rgb(38, 117, 206);
+  --secon-color: black;
+  --titles: 'Oswald', sans-serif;
+  --text:  'Roboto Condensed', sans-serif;
+}
 
-.right-sidebar {
-    grid-column: 3 / 4;
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Navigation Menu */
+nav {
+  background-color: black;
+}
+
+nav ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+nav ul li a {
+display: flex;
+justify-content: center;
+padding: 0.8rem 2vw;
+text-decoration: none;
+color: #eee;
+font-size: 1.5rem;
+border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+.open{
+  background-color: rgba(0, 0, 0, 0.9);
+  
+  position: fixed;
+  width: 100%;
+  
+}
+.open a{
+  margin-top: 1rem;
+}
+nav ul.open{
+  margin-top: 0.7rem;
+  height: 100%;
+  z-index: 2;
+}
+
+nav ul {
+  display: none;
   }
   
-.left-sidebar,
-.right-sidebar {
-    padding: 1rem;
-  }
+nav ul {display: none;}
+nav ul.open {display: block;}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+.hmbbutton{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+.hmbbutton button{
+  border: none;
+  background-color: black;
+}
+.hmbbutton span{
+      font-size: 1.5rem;
+      color: white;
+}
+
+/* Navigation Menu */
+
+header{
+  display: flex;
+  background-color: rgb(38, 117, 206);
+}
+header img{
+  width: 100px;
+  padding-left: 1rem;
+}
+header h1{
+  font-family: var(--titles);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: white;
+}
+
+
+.hero{
+  width: 100%;
+  position:relative;
+}
+.hero img{
+  width: 100%;
+}
+.herolabel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: radial-gradient(#fff, #6da5ee);
+  border: none;
+  padding: 1rem;
+  box-shadow: 0 0 3rem #fff;
+  opacity: 0.75;
+  z-index: 1;
   
-footer {
-    padding: 2rem;
-    text-align: center;
-    grid-column: 1 / 3;
-  }
-#visits {
-    color: navy;
-    font-weight: bolder;
-    font-size: larger;
-  }
+}
+
+/* Main */
+
+main{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main h2{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  font-family: var(--titles);
+}
+.card{
+  border-radius: 10px 10px;
+  margin: .4rem;
+  box-shadow: 5px 10px 20px 1px #5c5c5c;
+  font-family: var(--text);
+  
+}
+.card h3{
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgb(38, 117, 206);
+  margin-top: 0;
+  border-radius: 10px ;
+  border-bottom: 0px solid ;
+}
+.card li a{
+  color: rgb(38, 117, 206)
+}
+
+.card ul{
+  list-style: none;
+  margin-left: -2rem;
+}
+.card ul li{
+  text-decoration: none;
+  list-style: none;
+  padding-bottom: .5rem;
+ 
+}
+.card a{
+  text-decoration: none;
+  color: black;
+  margin-left: .3rem; 
+}
+section:nth-child(3){
+  padding-bottom: 1rem;
+}
+
+section:nth-child(3) a{
+  color: rgb(5, 52, 105);
+  margin-left: 1rem;
+
+}
+
+section p{
+  padding: 1rem;
+  font-family: var(--text);
+}
+
+
+.map{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.map iframe{
+  width: 600px;
+  height: 400px;
+}
+/* Footer */
+
+footer{
+  background-color:  rgb(38, 117, 206); ;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+footer p{
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.highlight{
+  color: yellow;
+}
+
+/*Form */
+.input-information{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+}
+form {
+display: grid;
+grid-gap: 0.35rem;
+grid-template-columns: 1fr 1fr;
+max-width: 425px;
+align-items: center;
+  margin: 1rem;
+}
+
+
+label,
+input,
+textarea,
+select,
+button {
+padding: 0.35rem;
+}
+
+label {
+text-align: left;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+background-color: #ddd;
+}
+
+#formmessage {
+display: none;
+text-align: center;
+border: 1px solid rgba(0, 0, 0, 0.2);
+background-color: #aa3333;
+color: #fff;
+padding: 0.5rem;
+}
+
+#formmessage,
+button {
+grid-column: 1/3;
+}
+
+#keyphrase:invalid {
+background-color: #ffccbb;
+animation: shaketext 500ms;
+}
+
+input:valid + input::before {
+content: "👍🏼";
+}
+
+@keyframes shaketext {
+25% {
+  transform: translateX(3px);
+}
+50% {
+  transform: translateX(-3px);
+}
+75% {
+  transform: translateX(3px);
+}
+}
+
+.table-section{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+table{
+  justify-content: center;
+  caption-side: bottom;
+  max-width: 450px;
+}
+
+table th{
+  border: none;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 15px;
+  background-color: #5c5c5c;
+ 
+}
+table tbody th:nth-child(1){
+  color: yellow;
+}
+table tbody th:nth-child(2){
+  color: rgb(250, 237, 237);
+}
+
+table thead{
+  background-color: var(--secon-color);
+  color: rgb(250, 237, 237);
+}
+table thead th{ 
+  background-color: var(--secon-color);;
+}
+
+
+
+/*Weather Secrtion*/
+
+.weather-container{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.weather-container h4{
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--titles);
+}
+figure{
+  margin: 0;
+}
+
+
