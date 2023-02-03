@@ -1,8 +1,7 @@
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDescription = document.querySelector('figcaption');
-const url = 'http://api.openweathermap.org/geo/1.0/direct?q=Trier&lat=49.750000&appid=c674c672e3c49ca45891f713307e2cef&lon=6.633333&unit=imperial';
-
+const url = 'http://api.openweathermap.org/geo/1.0/direct?q=Lebanon&zip=37087, us&lat=36.213089&appid=c674c672e3c49ca45891f713307e2cef&lon=-86.306480&unit=imperial&state=Tennessee';
 async function apiFetch(){
     try{
         const response = await fetch(url);

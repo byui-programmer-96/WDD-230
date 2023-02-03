@@ -1,7 +1,3 @@
-
-
-
-
 //This is for Hamburguer Menu 
 function toggleMenu() {
     document.getElementById("navigationLinks").classList.toggle("open")
