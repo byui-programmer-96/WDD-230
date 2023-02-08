@@ -2,7 +2,6 @@
 "Addresses":["1234 example Street","1234 example Street","1234 example Street","1234 example Street","1234 example Street","1234 example Street","1234 example Street"],
 "Phone Numbers":["123-456-7890","123-456-7890","123-456-7890","123-456-7890","123-456-7890","123-456-7890","123-456-7890"],
 "website URL":["www.example.com","www.example.com","www.example.com","www.example.com","www.example.com","www.example.com","www.example.com"],
-"image or icon file names":["","","","","","",""],
+"image or icon file names":["#","#","#","#","#","#","#"],
 "membership level":["Gold","Gold","Gold","Gold","Gold","Gold","Gold"]
-
 }
