@@ -3,7 +3,12 @@
     background-color:#002D65 ;
     font-family: 'Space Mono', monospace;
     color:white;
-}   
+}
+
+html {
+    width: 100vw;
+}
+
 body{
   display: grid;
   height: 100vh;
